@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>OpenGLWindow.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>4D66BA441E58847A0074E66C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D66BA6F1E58B26B0074E66C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D66BA771E58B2AA0074E66C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

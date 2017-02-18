@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2D81E91E58BFF800DF6E63 /* libglfw3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66BA501E5888C40074E66C /* libglfw3.3.1.dylib */; };
+		4D2D81EC1E58C46000DF6E63 /* Widget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D81EA1E58C46000DF6E63 /* Widget.cpp */; };
+		4D2D81ED1E58C46000DF6E63 /* Widget.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D2D81EB1E58C46000DF6E63 /* Widget.hpp */; };
 		4D66BA491E58847A0074E66C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D66BA481E58847A0074E66C /* main.cpp */; };
+		4D66BA511E5888C40074E66C /* libglfw3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66BA501E5888C40074E66C /* libglfw3.3.1.dylib */; };
+		4D66BA7F1E58B5600074E66C /* OpenGLWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D66BA7D1E58B5600074E66C /* OpenGLWindow.cpp */; };
+		4D66BA801E58B5600074E66C /* OpenGLWindow.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D66BA7E1E58B5600074E66C /* OpenGLWindow.hpp */; };
+		4D66BA851E58BDEC0074E66C /* libOpenGLWindow.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D2D81EA1E58C46000DF6E63 /* Widget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Widget.cpp; sourceTree = "<group>"; };
+		4D2D81EB1E58C46000DF6E63 /* Widget.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Widget.hpp; sourceTree = "<group>"; };
 		4D66BA451E58847A0074E66C /* OpenGLTraining */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLTraining; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D66BA481E58847A0074E66C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4D66BA501E5888C40074E66C /* libglfw3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw3.3.1.dylib; path = ../../../../../../usr/local/Cellar/glfw3/3.1.2/lib/libglfw3.3.1.dylib; sourceTree = "<group>"; };
+		4D66BA781E58B2AA0074E66C /* libOpenGLWindow.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libOpenGLWindow.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D66BA7D1E58B5600074E66C /* OpenGLWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLWindow.cpp; sourceTree = "<group>"; };
+		4D66BA7E1E58B5600074E66C /* OpenGLWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OpenGLWindow.hpp; sourceTree = "<group>"; };
+		4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOpenGLWindow.dylib; path = ../../../MyLibaries/lib/libOpenGLWindow.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D66BA851E58BDEC0074E66C /* libOpenGLWindow.dylib in Frameworks */,
+				4D66BA511E5888C40074E66C /* libglfw3.3.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D66BA751E58B2AA0074E66C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2D81E91E58BFF800DF6E63 /* libglfw3.3.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +65,10 @@
 		4D66BA3C1E58847A0074E66C = {
 			isa = PBXGroup;
 			children = (
+				4D66BA7C1E58B5370074E66C /* OpenGLWindow */,
 				4D66BA471E58847A0074E66C /* OpenGLTraining */,
 				4D66BA461E58847A0074E66C /* Products */,
+				4D66BA4F1E5888C40074E66C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4D66BA451E58847A0074E66C /* OpenGLTraining */,
+				4D66BA781E58B2AA0074E66C /* libOpenGLWindow.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,7 +89,39 @@
 			path = OpenGLTraining;
 			sourceTree = "<group>";
 		};
+		4D66BA4F1E5888C40074E66C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */,
+				4D66BA501E5888C40074E66C /* libglfw3.3.1.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D66BA7C1E58B5370074E66C /* OpenGLWindow */ = {
+			isa = PBXGroup;
+			children = (
+				4D66BA7D1E58B5600074E66C /* OpenGLWindow.cpp */,
+				4D66BA7E1E58B5600074E66C /* OpenGLWindow.hpp */,
+				4D2D81EA1E58C46000DF6E63 /* Widget.cpp */,
+				4D2D81EB1E58C46000DF6E63 /* Widget.hpp */,
+			);
+			path = OpenGLWindow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D66BA761E58B2AA0074E66C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D2D81ED1E58C46000DF6E63 /* Widget.hpp in Headers */,
+				4D66BA801E58B5600074E66C /* OpenGLWindow.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		4D66BA441E58847A0074E66C /* OpenGLTraining */ = {
@@ -82,6 +141,24 @@
 			productReference = 4D66BA451E58847A0074E66C /* OpenGLTraining */;
 			productType = "com.apple.product-type.tool";
 		};
+		4D66BA771E58B2AA0074E66C /* OpenGLWindow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D66BA791E58B2AA0074E66C /* Build configuration list for PBXNativeTarget "OpenGLWindow" */;
+			buildPhases = (
+				4D66BA741E58B2AA0074E66C /* Sources */,
+				4D66BA751E58B2AA0074E66C /* Frameworks */,
+				4D66BA761E58B2AA0074E66C /* Headers */,
+				4D66BA831E58B9550074E66C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenGLWindow;
+			productName = OpenGLWindow;
+			productReference = 4D66BA781E58B2AA0074E66C /* libOpenGLWindow.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +169,10 @@
 				ORGANIZATIONNAME = batlab;
 				TargetAttributes = {
 					4D66BA441E58847A0074E66C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					4D66BA771E58B2AA0074E66C = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,9 +191,26 @@
 			projectRoot = "";
 			targets = (
 				4D66BA441E58847A0074E66C /* OpenGLTraining */,
+				4D66BA771E58B2AA0074E66C /* OpenGLWindow */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D66BA831E58B9550074E66C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "INCLUDE_PATH='/Volumes/SEAGATE/Mac/MyLibaries/include/OpenGLWindow'\nLIB_PATH='/Volumes/SEAGATE/Mac/MyLibaries/lib'\nSOURCE_BIN_PATH='/Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLWindow/Debug'\nSOURCE_HEADERS_PATH='/Volumes/SEAGATE/Mac/Projects/OpenGL/OpenGLTraining/OpenGLWindow'\nLIB_NAME='libOpenGLWindow.dylib'\n\ncp \"$SOURCE_BIN_PATH/$LIB_NAME\" \"$LIB_PATH\"\nif [ -d \"$INCLUDE_PATH\" ]; then rm -Rf $INCLUDE_PATH; fi\nmkdir $INCLUDE_PATH\ncp -R $SOURCE_HEADERS_PATH/*.hpp $INCLUDE_PATH";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D66BA411E58847A0074E66C /* Sources */ = {
@@ -120,6 +218,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D66BA491E58847A0074E66C /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D66BA741E58B2AA0074E66C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D66BA7F1E58B5600074E66C /* OpenGLWindow.cpp in Sources */,
+				4D2D81EC1E58C46000DF6E63 /* Widget.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +323,16 @@
 		4D66BA4D1E58847A0074E66C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw3/3.1.2/include,
+					/Volumes/SEAGATE/Mac/MyLibaries/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw3/3.1.2/lib,
+					/Volumes/SEAGATE/Mac/MyLibaries/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTraining;
 			};
@@ -224,8 +341,64 @@
 		4D66BA4E1E58847A0074E66C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/glfw3/3.1.2/include,
+					/Volumes/SEAGATE/Mac/MyLibaries/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw3/3.1.2/lib,
+					/Volumes/SEAGATE/Mac/MyLibaries/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTraining;
+			};
+			name = Release;
+		};
+		4D66BA7A1E58B2AA0074E66C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw3/3.1.2/include,
+					/Volumes/SEAGATE/Mac/MyLibaries/include,
+				);
+				INSTALL_PATH = /Volumes/SEAGATE/Mac/MyLibaries/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw3/3.1.2/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRIVATE_HEADERS_FOLDER_PATH = /Volumes/SEAGATE/Mac/MyLibaries/include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /Volumes/SEAGATE/Mac/MyLibaries/include;
+				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLWindow;
+			};
+			name = Debug;
+		};
+		4D66BA7B1E58B2AA0074E66C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/glfw3/3.1.2/include,
+					/Volumes/SEAGATE/Mac/MyLibaries/include,
+				);
+				INSTALL_PATH = /Volumes/SEAGATE/Mac/MyLibaries/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw3/3.1.2/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRIVATE_HEADERS_FOLDER_PATH = /Volumes/SEAGATE/Mac/MyLibaries/include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /Volumes/SEAGATE/Mac/MyLibaries/include;
+				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLWindow;
 			};
 			name = Release;
 		};
@@ -248,6 +421,16 @@
 				4D66BA4E1E58847A0074E66C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D66BA791E58B2AA0074E66C /* Build configuration list for PBXNativeTarget "OpenGLWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D66BA7A1E58B2AA0074E66C /* Debug */,
+				4D66BA7B1E58B2AA0074E66C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
