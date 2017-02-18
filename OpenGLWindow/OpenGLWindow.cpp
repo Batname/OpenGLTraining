@@ -28,6 +28,7 @@ OpenGLWindow::OpenGLWindow()
     if (!Window) ErrorExit("glfwCreateWindow() in OpenGLWindow()");
     
     glfwMakeContextCurrent(Window);
+    glfwSetKeyCallback(Window, OpenGLWindow::KeyCallback);
     
     // Init Glew
     glewExperimental = GL_TRUE;
@@ -37,6 +38,12 @@ OpenGLWindow::OpenGLWindow()
     int Width, Height;
     glfwGetFramebufferSize(Window, &Width, &Height);
     glViewport(0, 0, Width, Height);
+    
+    // Set custom props
+    SetStatus(EStatus::ERunning);
+    
+    // Inform widget about this pointer
+    Widget::openGLWindow = this;
 }
 
 OpenGLWindow::~OpenGLWindow()
@@ -46,9 +53,11 @@ OpenGLWindow::~OpenGLWindow()
 
 int OpenGLWindow::exec()
 {
+    // Program loop
     while (!glfwWindowShouldClose(Window)) {
         glfwSwapBuffers(Window);
         
+        HandleState();
         for(Widget* widget : OpenGLWindow::Widgets)
         {
             widget->Render();
@@ -72,4 +81,33 @@ void OpenGLWindow::ErrorExit(const char* Msg)
 void OpenGLWindow::RegisterWidget(Widget* widget)
 {
     OpenGLWindow::Widgets.push_back(widget);
+}
+
+void OpenGLWindow::KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode)
+{
+    for(Widget* widget : OpenGLWindow::Widgets)
+    {
+        widget->KeyCallback(key, scancode, action, mode);
+    }
+}
+
+void OpenGLWindow::SetStatus(EStatus NewStatus)
+{
+    Status = NewStatus;
+}
+
+void OpenGLWindow::HandleState()
+{
+    // Check statuses
+    switch (Status) {
+        case EStatus::EShouldClose:
+            glfwSetWindowShouldClose(Window, GL_TRUE);
+            break;
+            
+        case EStatus::ERunning:
+            // ERunning
+            break;
+        default:
+            break;
+    }
 }
