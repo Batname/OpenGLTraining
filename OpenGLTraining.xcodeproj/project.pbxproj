@@ -16,10 +16,22 @@
 		4D66BA851E58BDEC0074E66C /* libOpenGLWindow.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */; };
 		4DFBB6161E58D27C00B7388D /* libGLEW.1.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBB6151E58D27C00B7388D /* libGLEW.1.13.0.dylib */; };
 		4DFBB6181E58D3FE00B7388D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBB6171E58D3FE00B7388D /* OpenGL.framework */; };
+		4DFBB6201E58D4F400B7388D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBB61F1E58D4F400B7388D /* main.cpp */; };
+		4DFBB6251E58D7AE00B7388D /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBB6241E58D7AE00B7388D /* libgtest.a */; };
+		4DFBB6271E58D84A00B7388D /* MainTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBB6261E58D84A00B7388D /* MainTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4D66BA431E58847A0074E66C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4DFBB61B1E58D4F400B7388D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -42,6 +54,10 @@
 		4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOpenGLWindow.dylib; path = ../../../MyLibaries/lib/libOpenGLWindow.dylib; sourceTree = "<group>"; };
 		4DFBB6151E58D27C00B7388D /* libGLEW.1.13.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.1.13.0.dylib; path = ../../../../../../usr/local/Cellar/glew/1.13.0/lib/libGLEW.1.13.0.dylib; sourceTree = "<group>"; };
 		4DFBB6171E58D3FE00B7388D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		4DFBB61D1E58D4F400B7388D /* OpenGLTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DFBB61F1E58D4F400B7388D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4DFBB6241E58D7AE00B7388D /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../../../../usr/local/Cellar/gtest/libgtest.a; sourceTree = "<group>"; };
+		4DFBB6261E58D84A00B7388D /* MainTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainTest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +79,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DFBB61A1E58D4F400B7388D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DFBB6251E58D7AE00B7388D /* libgtest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +95,7 @@
 			children = (
 				4D66BA7C1E58B5370074E66C /* OpenGLWindow */,
 				4D66BA471E58847A0074E66C /* OpenGLTraining */,
+				4DFBB61E1E58D4F400B7388D /* OpenGLTests */,
 				4D66BA461E58847A0074E66C /* Products */,
 				4D66BA4F1E5888C40074E66C /* Frameworks */,
 			);
@@ -81,6 +106,7 @@
 			children = (
 				4D66BA451E58847A0074E66C /* OpenGLTraining */,
 				4D66BA781E58B2AA0074E66C /* libOpenGLWindow.dylib */,
+				4DFBB61D1E58D4F400B7388D /* OpenGLTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +122,7 @@
 		4D66BA4F1E5888C40074E66C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DFBB6241E58D7AE00B7388D /* libgtest.a */,
 				4DFBB6171E58D3FE00B7388D /* OpenGL.framework */,
 				4DFBB6151E58D27C00B7388D /* libGLEW.1.13.0.dylib */,
 				4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */,
@@ -113,6 +140,15 @@
 				4D2D81EB1E58C46000DF6E63 /* Widget.hpp */,
 			);
 			path = OpenGLWindow;
+			sourceTree = "<group>";
+		};
+		4DFBB61E1E58D4F400B7388D /* OpenGLTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DFBB61F1E58D4F400B7388D /* main.cpp */,
+				4DFBB6261E58D84A00B7388D /* MainTest.cpp */,
+			);
+			path = OpenGLTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +201,23 @@
 			productReference = 4D66BA781E58B2AA0074E66C /* libOpenGLWindow.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		4DFBB61C1E58D4F400B7388D /* OpenGLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DFBB6211E58D4F400B7388D /* Build configuration list for PBXNativeTarget "OpenGLTests" */;
+			buildPhases = (
+				4DFBB6191E58D4F400B7388D /* Sources */,
+				4DFBB61A1E58D4F400B7388D /* Frameworks */,
+				4DFBB61B1E58D4F400B7388D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenGLTests;
+			productName = OpenGLTests;
+			productReference = 4DFBB61D1E58D4F400B7388D /* OpenGLTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,6 +232,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					4D66BA771E58B2AA0074E66C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					4DFBB61C1E58D4F400B7388D = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -198,6 +255,7 @@
 			targets = (
 				4D66BA441E58847A0074E66C /* OpenGLTraining */,
 				4D66BA771E58B2AA0074E66C /* OpenGLWindow */,
+				4DFBB61C1E58D4F400B7388D /* OpenGLTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +291,15 @@
 			files = (
 				4D66BA7F1E58B5600074E66C /* OpenGLWindow.cpp in Sources */,
 				4D2D81EC1E58C46000DF6E63 /* Widget.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DFBB6191E58D4F400B7388D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DFBB6271E58D84A00B7388D /* MainTest.cpp in Sources */,
+				4DFBB6201E58D4F400B7388D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +479,32 @@
 			};
 			name = Release;
 		};
+		4DFBB6221E58D4F400B7388D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/gtest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTests;
+			};
+			name = Debug;
+		};
+		4DFBB6231E58D4F400B7388D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/gtest,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTests;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -438,6 +531,15 @@
 			buildConfigurations = (
 				4D66BA7A1E58B2AA0074E66C /* Debug */,
 				4D66BA7B1E58B2AA0074E66C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DFBB6211E58D4F400B7388D /* Build configuration list for PBXNativeTarget "OpenGLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DFBB6221E58D4F400B7388D /* Debug */,
+				4DFBB6231E58D4F400B7388D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

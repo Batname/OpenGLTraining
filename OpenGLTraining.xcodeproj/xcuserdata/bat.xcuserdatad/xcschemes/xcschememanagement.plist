@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>OpenGLTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>OpenGLTraining.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>4D66BA771E58B2AA0074E66C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4DFBB61C1E58D4F400B7388D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
