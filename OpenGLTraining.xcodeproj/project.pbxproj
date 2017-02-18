@@ -217,6 +217,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTraining;
 			};
 			name = Debug;
 		};
@@ -224,6 +225,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTraining;
 			};
 			name = Release;
 		};
