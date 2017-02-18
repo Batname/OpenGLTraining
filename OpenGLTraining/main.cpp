@@ -23,7 +23,11 @@ void MyWidget::KeyCallback(int key, int scancode, int action, int mode)
     // call parent
     Widget::KeyCallback(key, scancode, action, mode);
 
-    GetOpenGLWindow()->SetStatus(OpenGLWindow::EStatus::EShouldClose);
+    if(key == 256 && action == 1)
+    {
+        GetOpenGLWindow()->SetStatus(OpenGLWindow::EStatus::EShouldClose);
+
+    }
 }
 
 int main() {

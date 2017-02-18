@@ -10,10 +10,10 @@
 		4D2D81E91E58BFF800DF6E63 /* libglfw3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66BA501E5888C40074E66C /* libglfw3.3.1.dylib */; };
 		4D2D81EC1E58C46000DF6E63 /* Widget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D81EA1E58C46000DF6E63 /* Widget.cpp */; };
 		4D2D81ED1E58C46000DF6E63 /* Widget.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D2D81EB1E58C46000DF6E63 /* Widget.hpp */; };
+		4D443A631E58F01A00EF6236 /* libOpenGLWindow.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66BA781E58B2AA0074E66C /* libOpenGLWindow.dylib */; };
 		4D66BA491E58847A0074E66C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D66BA481E58847A0074E66C /* main.cpp */; };
 		4D66BA7F1E58B5600074E66C /* OpenGLWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D66BA7D1E58B5600074E66C /* OpenGLWindow.cpp */; };
 		4D66BA801E58B5600074E66C /* OpenGLWindow.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D66BA7E1E58B5600074E66C /* OpenGLWindow.hpp */; };
-		4D66BA851E58BDEC0074E66C /* libOpenGLWindow.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */; };
 		4DFBB6161E58D27C00B7388D /* libGLEW.1.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBB6151E58D27C00B7388D /* libGLEW.1.13.0.dylib */; };
 		4DFBB6181E58D3FE00B7388D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBB6171E58D3FE00B7388D /* OpenGL.framework */; };
 		4DFBB6201E58D4F400B7388D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBB61F1E58D4F400B7388D /* main.cpp */; };
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D66BA851E58BDEC0074E66C /* libOpenGLWindow.dylib in Frameworks */,
+				4D443A631E58F01A00EF6236 /* libOpenGLWindow.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,13 +398,13 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
-					/usr/local/Cellar/glfw3/3.1.2/include,
 					/Volumes/SEAGATE/Mac/MyLibaries/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw3/3.1.2/lib,
 					/Volumes/SEAGATE/Mac/MyLibaries/lib,
+					/usr/local/Cellar/glew/1.13.0/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTraining;
@@ -416,13 +416,13 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
-					/usr/local/Cellar/glfw3/3.1.2/include,
 					/Volumes/SEAGATE/Mac/MyLibaries/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw3/3.1.2/lib,
 					/Volumes/SEAGATE/Mac/MyLibaries/lib,
+					/usr/local/Cellar/glew/1.13.0/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYMROOT = /Volumes/SEAGATE/Mac/Debug/OpenGL/OpenGLTraining;
