@@ -17,8 +17,7 @@ protected:
 private:
     
     friend class OpenGLWindow;
-    
-    static class OpenGLWindow* openGLWindow;
+
 };
 
 #endif /* Widget_hpp */

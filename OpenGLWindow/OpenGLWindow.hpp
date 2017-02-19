@@ -5,6 +5,8 @@
 #include <iostream>
 #include <vector>
 
+class OpenGLWindow;
+
 class OpenGLWindow
 {
 public:
@@ -25,6 +27,7 @@ public:
     
     /** Static methods */
     static void RegisterWidget(class Widget* widget);
+    static OpenGLWindow* GetOpenGLWindow();
 protected:
 private:
     /** Props */
@@ -33,6 +36,7 @@ private:
     
     /** Static props */
     static std::vector<class Widget*> Widgets;
+    static class OpenGLWindow* openGLWindow;
 
     
     void ErrorExit(const char* Msg);

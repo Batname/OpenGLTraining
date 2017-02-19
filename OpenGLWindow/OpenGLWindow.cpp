@@ -12,7 +12,9 @@
 #include "OpenGLWindow.hpp"
 #include "Widget.hpp"
 
+// Define static props
 std::vector<Widget*> OpenGLWindow::Widgets = {};
+OpenGLWindow* OpenGLWindow::openGLWindow = nullptr;
 
 OpenGLWindow::OpenGLWindow()
 {
@@ -43,7 +45,7 @@ OpenGLWindow::OpenGLWindow()
     SetStatus(EStatus::ERunning);
     
     // Inform widget about this pointer
-    Widget::openGLWindow = this;
+    OpenGLWindow::openGLWindow = this;
 }
 
 OpenGLWindow::~OpenGLWindow()
@@ -89,6 +91,11 @@ void OpenGLWindow::KeyCallback(GLFWwindow* window, int key, int scancode, int ac
     {
         widget->KeyCallback(key, scancode, action, mode);
     }
+}
+
+OpenGLWindow* OpenGLWindow::GetOpenGLWindow()
+{
+    return OpenGLWindow::openGLWindow;
 }
 
 void OpenGLWindow::SetStatus(EStatus NewStatus)
