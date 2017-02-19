@@ -20,9 +20,17 @@ public:
     virtual void Begin();
     virtual void Tick(float DeltaTime);
     
+    void SetVertexShader(const char* vertexShader);
+    void SetFragmentShader(const char* fragmentShader);
+    
 protected:
 private:
     class Widget* ParentWidget;
+    const char* VertexShaderPath;
+    const char* FragmentShaderPath;
+    class Shader* ActorShader;
+    
+    friend class Widget;
 };
 
 #endif /* Actor_hpp */

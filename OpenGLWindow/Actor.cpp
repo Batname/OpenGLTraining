@@ -11,15 +11,18 @@
 #include "Actor.hpp"
 #include "Widget.hpp"
 #include "OpenGLWindow.hpp"
+#include "Shader.hpp"
 
 Actor::Actor(Widget* ParentWidget) : ParentWidget(ParentWidget)
 {
-    // Register actor
-    OpenGLWindow::RegisterActor(this, ParentWidget);
+    // Default properties
+    VertexShaderPath = nullptr;
+    FragmentShaderPath = nullptr;
 }
 
 Actor::~Actor()
 {
+    delete ActorShader;
 }
 
 void Actor::Begin()
@@ -28,4 +31,14 @@ void Actor::Begin()
 
 void Actor::Tick(float DeltaTime)
 {
+}
+
+void Actor::SetVertexShader(const char* vertexShader)
+{
+    VertexShaderPath = vertexShader;
+}
+
+void Actor::SetFragmentShader(const char* fragmentShader)
+{
+    FragmentShaderPath = fragmentShader;
 }

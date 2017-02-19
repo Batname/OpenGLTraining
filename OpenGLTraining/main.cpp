@@ -16,7 +16,6 @@ private:
 MyActor::MyActor(Widget* ParentWidget) :
     Actor(ParentWidget)
 {
-
 }
 MyActor::~MyActor()
 {
@@ -36,7 +35,8 @@ private:
 
 MyWidget::MyWidget()
 {
-    MyActor actor(this);
+    MyActor* actor = new MyActor(this);
+    RegisterActor(actor);
     // add actor to widget
 }
 
