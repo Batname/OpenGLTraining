@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+#include <map>
 
 class OpenGLWindow;
 
@@ -28,6 +29,9 @@ public:
     /** Static methods */
     static void RegisterWidget(class Widget* widget);
     static OpenGLWindow* GetOpenGLWindow();
+    
+    static void RegisterActor(class Actor* actor, class Widget* widget);
+    static std::map<class Actor*, class Widget*> GetActors();
 protected:
 private:
     /** Props */
@@ -36,6 +40,7 @@ private:
     
     /** Static props */
     static std::vector<class Widget*> Widgets;
+    static std::map<class Actor*, class Widget*> Actors;
     static class OpenGLWindow* openGLWindow;
 
     

@@ -14,6 +14,8 @@
 		4D66BA491E58847A0074E66C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D66BA481E58847A0074E66C /* main.cpp */; };
 		4D66BA7F1E58B5600074E66C /* OpenGLWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D66BA7D1E58B5600074E66C /* OpenGLWindow.cpp */; };
 		4D66BA801E58B5600074E66C /* OpenGLWindow.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D66BA7E1E58B5600074E66C /* OpenGLWindow.hpp */; };
+		4D90D5DF1E59891300477D21 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D90D5DD1E59891300477D21 /* Actor.cpp */; };
+		4D90D5E01E59891300477D21 /* Actor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4D90D5DE1E59891300477D21 /* Actor.hpp */; };
 		4DFBB6161E58D27C00B7388D /* libGLEW.1.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBB6151E58D27C00B7388D /* libGLEW.1.13.0.dylib */; };
 		4DFBB6181E58D3FE00B7388D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBB6171E58D3FE00B7388D /* OpenGL.framework */; };
 		4DFBB6201E58D4F400B7388D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DFBB61F1E58D4F400B7388D /* main.cpp */; };
@@ -52,6 +54,8 @@
 		4D66BA7D1E58B5600074E66C /* OpenGLWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLWindow.cpp; sourceTree = "<group>"; };
 		4D66BA7E1E58B5600074E66C /* OpenGLWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OpenGLWindow.hpp; sourceTree = "<group>"; };
 		4D66BA841E58BDEC0074E66C /* libOpenGLWindow.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOpenGLWindow.dylib; path = ../../../MyLibaries/lib/libOpenGLWindow.dylib; sourceTree = "<group>"; };
+		4D90D5DD1E59891300477D21 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
+		4D90D5DE1E59891300477D21 /* Actor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Actor.hpp; sourceTree = "<group>"; };
 		4DFBB6151E58D27C00B7388D /* libGLEW.1.13.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.1.13.0.dylib; path = ../../../../../../usr/local/Cellar/glew/1.13.0/lib/libGLEW.1.13.0.dylib; sourceTree = "<group>"; };
 		4DFBB6171E58D3FE00B7388D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4DFBB61D1E58D4F400B7388D /* OpenGLTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLTests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,8 @@
 				4D66BA7E1E58B5600074E66C /* OpenGLWindow.hpp */,
 				4D2D81EA1E58C46000DF6E63 /* Widget.cpp */,
 				4D2D81EB1E58C46000DF6E63 /* Widget.hpp */,
+				4D90D5DD1E59891300477D21 /* Actor.cpp */,
+				4D90D5DE1E59891300477D21 /* Actor.hpp */,
 			);
 			path = OpenGLWindow;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D90D5E01E59891300477D21 /* Actor.hpp in Headers */,
 				4D2D81ED1E58C46000DF6E63 /* Widget.hpp in Headers */,
 				4D66BA801E58B5600074E66C /* OpenGLWindow.hpp in Headers */,
 			);
@@ -289,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D90D5DF1E59891300477D21 /* Actor.cpp in Sources */,
 				4D66BA7F1E58B5600074E66C /* OpenGLWindow.cpp in Sources */,
 				4D2D81EC1E58C46000DF6E63 /* Widget.cpp in Sources */,
 			);

@@ -11,9 +11,12 @@
 
 #include "OpenGLWindow.hpp"
 #include "Widget.hpp"
+#include "Actor.hpp"
 
 // Define static props
 std::vector<Widget*> OpenGLWindow::Widgets = {};
+std::map<Actor*, Widget*> OpenGLWindow::Actors = {};
+
 OpenGLWindow* OpenGLWindow::openGLWindow = nullptr;
 
 OpenGLWindow::OpenGLWindow()
@@ -85,6 +88,16 @@ void OpenGLWindow::RegisterWidget(Widget* widget)
     OpenGLWindow::Widgets.push_back(widget);
 }
 
+void OpenGLWindow::RegisterActor(Actor* actor,Widget* widget)
+{
+    OpenGLWindow::Actors[actor] = widget;
+}
+
+std::map<class Actor*, class Widget*> OpenGLWindow::GetActors()
+{
+    return OpenGLWindow::Actors;
+}
+
 void OpenGLWindow::KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode)
 {
     for(Widget* widget : OpenGLWindow::Widgets)
@@ -118,3 +131,11 @@ void OpenGLWindow::HandleState()
             break;
     }
 }
+
+/** Iterate actors
+ std::map<Actor*, Widget*>::iterator it;
+ for(it = OpenGLWindow::GetActors().begin(); it != OpenGLWindow::GetActors().end(); it++)
+ {
+ printf("0x%x", it->first);
+ }
+ */

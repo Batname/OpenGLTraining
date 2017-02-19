@@ -1,5 +1,6 @@
 #include "OpenGLWindow.hpp"
 #include "Widget.hpp"
+#include "Actor.hpp"
 
 Widget::Widget()
 {
